@@ -1,196 +1,197 @@
 /* General Styles */
 * {
-    
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 
 body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
-/* CARAOUSEL */
- #carouselExampleCaptions {
+/* CAROUSEL */
+#carouselExampleCaptions {
     height: 600px;
-  }
+}
 
-  #carouselExampleCaptions .carousel-item img {
-    height: 600px;
+#carouselExampleCaptions .carousel-item img {
+    height: 100%;
+    width: 100%;
     object-fit: cover; 
-  }
-  .carousel-caption h1{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 90px;
-        text-align: left;
-        text-shadow: #000 0px 0px 30px;    
-  }
-  .carousel-caption p{
+}
+
+.carousel-caption h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6vw;
+    text-align: left;
+    text-shadow: #000 0px 0px 30px;    
+}
+
+.carousel-caption p {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 3vw;
     text-align: left;
     text-shadow: #000 0px 0px 30px;
-  }
+}
 
-  /* MEDALS */
-
-  .medal{
+/* MEDALS */
+.medal {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px;
     background-image: url(media/bgs/grey-pattern.jpg);
-  }
-  .medal-one{
-    width: 40%;
+}
+
+.medal-one {
+    width: 100%;
+    max-width: 50%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
-  }
-  .medal-one h2{
-    
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.medal-one h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5vw;
     font-weight: 900;
-  }
-  .medal-one span{
+}
+
+.medal-one span {
     background-color: #333;
     color: #d7d7d7;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 5px;
     font-weight: 600;
-  }.medal-one span:hover{
+    display: inline-block;
+}
+
+.medal-one span:hover {
     color: #140f22;
     background-color: #a5a4a8;
     transition: 1s;
-  }
-  .medal-one a{
+}
+
+.medal-one a {
     text-decoration: none;
-  }
+}
 
-    table {
-        width: 800px;
-        margin: 3px auto;
-        border-collapse: collapse;
-        max-height: 400px;
-        overflow-y: scroll;
-        border-radius:50px;  
-        
-    }
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
 
-    thead th {
-        background-color: #140f22;
-        color: white;
-        padding: 10px;
-        text-align: left;
-        position: sticky;
-        top: 0;
+thead th {
+    background-color: #140f22;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+}
 
-    }
-    
-    tbody tr:nth-child(odd) {
-        background-color: #c1c0c4;
-        
-    }
+tbody tr:nth-child(odd) {
+    background-color: #c1c0c4;
+}
 
-    tbody tr:nth-child(even) {
-        background-color: #a5a4a8;
-    }
+tbody tr:nth-child(even) {
+    background-color: #a5a4a8;
+}
 
-    tbody td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd; 
-        text-decoration: none; 
-    }
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
-    .flag {
-        width: 20px;
-        height: 15px;
-        margin-right: 10px;
-        vertical-align: middle;
-    }
-    .link{
-        text-decoration: none;
-    }
-    .medal-count{
-        text-align: center;
-    }
-    /* Styling scrollbar */
-    .table-container::-webkit-scrollbar {
-        width: 10px;
-    }
+.flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
-    .table-container::-webkit-scrollbar-thumb {
-        background-color: #2e1c5c;
-        border-radius: 5px;
-    }
+/* Styling scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 10px;
+}
 
-    .table-container::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
-    }
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #2e1c5c;
+    border-radius: 5px;
+}
 
+.table-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
 
 /* QUOTE */
-.quote{
+.quote {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     padding: 30px;
     background-color: #000;
     background-image: url(media/bgs/star-black.jpg);
-    /* background-position: top; */
-    /* background-repeat: no-repeat; */
-    background-size: 40%;
+    background-size: cover;
     color: #ddd;
     text-align: center;
 }
-.quote h3{
-    font-family:'Yatra One', system-ui;
+
+.quote h3 {
+    font-family: 'Yatra One', system-ui;
+    font-size: 24px;
 }
-.quote p{
+
+.quote p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
 }
-.quote-border{
-    padding: 30px 0 0 30px;
+
+.quote-border {
+    padding: 15px;
     border-radius: 5px;
-    align-items: center;
     border: 2px white solid;
 }
-.quote:hover .quote-border{
+
+.quote:hover .quote-border {
     text-shadow: 0 0 5px white;
     transition: 1s;
 }
 
-
-/* ABOUT_GALERY */
-.about-gallery{
-    background-image: url(media/bgs/whiteGreyMarble.jpg );
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* ABOUT */
-.about{
-    
+.about {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
 }
-.about h1{
+
+.about h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 80px;
+    font-size: 5vw;
 }
-.about p{
+
+.about p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 800;
     font-size: 16px;
+    max-width: 600px;
 }
-.about img{
-    width: 700px;
-    -webkit-mask-image: linear-gradient(to left, black 45% , transparent 95%);
+
+.about img {
+    width: 100%;
+    max-width: 700px;
+    -webkit-mask-image: linear-gradient(to left, black 45%, transparent 95%);
 }
-.about a{
+
+.about a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
     font-weight: 800;
@@ -199,47 +200,107 @@ body {
     color: #ddd;
     border-radius: 5px;
     text-decoration: none;
-}.about a:hover{
+}
+
+.about a:hover {
     background-color: #a5a4a8;
     color: #000;
     transition: 1s;
 }
 
 /* GALLERY */
-.gallery{
-    padding: 15px 30px 30px 30px;
+.gallery {
+    padding: 15px 30px;
 }
-.gallery h1{
+
+.gallery h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    font-size: 4vw;
     font-weight: 500;
 }
+
 .gallery .carousel-image {
     height: 300px;
-    object-fit: cover; 
-  }
+    object-fit: cover;
+}
 
 /* SUBSCRIBE */
-.subscribe{
+.subscribe {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     color: rgb(184, 187, 187);
     background-color: #000;
+    padding: 20px;
 }
-.subscribe img{
-    height: 370px;
-    -webkit-mask-image: linear-gradient(to right, black 60% , transparent 110%);
 
+.subscribe img {
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, black 60%, transparent 110%);
 }
-.subscribe div{
-    margin: 20px 30px 20px 0px;
+
+.subscribe div {
+    margin: 20px;
+    text-align: center;
 }
-.subscribe div h2{
+
+.subscribe div h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
+    font-size: 4vw;
     margin-bottom: 20px;
 }
-.subscribe div p{
+
+.subscribe div p {
     font-weight: 500;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .carousel-caption h1 {
+        font-size: 5vw;
+    }
 
+    .medal-one h2 {
+        font-size: 4.5vw;
+    }
+
+    .about img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 6vw;
+    }
+
+    .medal {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .quote p {
+        font-size: 16px;
+    }
+
+    .subscribe {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption p {
+        font-size: 4vw;
+    }
+
+    .about h1 {
+        font-size: 6vw;
+    }
+
+    .subscribe div h2 {
+        font-size: 5.5vw;
+    }
+}
