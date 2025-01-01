@@ -2,12 +2,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 /* CAROUSEL */
@@ -16,20 +18,21 @@ body {
 }
 
 #carouselExampleCaptions .carousel-item img {
-    height: 600px;
-    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
 }
 
 .carousel-caption h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 90px;
+    font-size: 6vw;
     text-align: left;
-    text-shadow: #000 0px 0px 30px;
+    text-shadow: #000 0px 0px 30px;    
 }
 
 .carousel-caption p {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 3vw;
     text-align: left;
     text-shadow: #000 0px 0px 30px;
 }
@@ -37,29 +40,33 @@ body {
 /* MEDALS */
 .medal {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px;
     background-image: url(media/bgs/grey-pattern.jpg);
 }
 
 .medal-one {
-    width: 40%;
+    width: 100%;
+    max-width: 50%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
+    margin-bottom: 20px;
 }
 
 .medal-one h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    font-size: 5vw;
     font-weight: 900;
 }
 
 .medal-one span {
     background-color: #333;
     color: #d7d7d7;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 5px;
     font-weight: 600;
+    display: inline-block;
 }
 
 .medal-one span:hover {
@@ -74,11 +81,9 @@ body {
 
 table {
     width: 100%;
-    margin: 3px auto;
+    max-width: 800px;
+    margin: 10px auto;
     border-collapse: collapse;
-    max-height: 400px;
-    overflow-y: scroll;
-    border-radius: 50px;
 }
 
 thead th {
@@ -101,7 +106,6 @@ tbody tr:nth-child(even) {
 tbody td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
-    text-decoration: none;
 }
 
 .flag {
@@ -109,14 +113,6 @@ tbody td {
     height: 15px;
     margin-right: 10px;
     vertical-align: middle;
-}
-
-.link {
-    text-decoration: none;
-}
-
-.medal-count {
-    text-align: center;
 }
 
 /* Styling scrollbar */
@@ -135,29 +131,32 @@ tbody td {
 
 /* QUOTE */
 .quote {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     padding: 30px;
     background-color: #000;
     background-image: url(media/bgs/star-black.jpg);
-    background-size: 40%;
+    background-size: cover;
     color: #ddd;
     text-align: center;
 }
 
 .quote h3 {
     font-family: 'Yatra One', system-ui;
+    font-size: 24px;
 }
 
 .quote p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
 }
 
 .quote-border {
-    padding: 30px 0 0 30px;
+    padding: 15px;
     border-radius: 5px;
-    align-items: center;
     border: 2px white solid;
 }
 
@@ -166,32 +165,24 @@ tbody td {
     transition: 1s;
 }
 
-/* ABOUT_GALLERY */
-.about-gallery {
-    background-image: url(media/bgs/whiteGreyMarble.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* ABOUT */
 .about {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .about h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 80px;
+    font-size: 5vw;
 }
 
 .about p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 800;
     font-size: 16px;
+    max-width: 600px;
 }
 
 .about img {
@@ -219,12 +210,12 @@ tbody td {
 
 /* GALLERY */
 .gallery {
-    padding: 15px 30px 30px 30px;
+    padding: 15px 30px;
 }
 
 .gallery h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    font-size: 4vw;
     font-weight: 500;
 }
 
@@ -237,28 +228,28 @@ tbody td {
 .subscribe {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     color: rgb(184, 187, 187);
     background-color: #000;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 20px;
 }
 
 .subscribe img {
-    height: auto;
-    max-height: 370px;
-    max-width: 100%;
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
     -webkit-mask-image: linear-gradient(to right, black 60%, transparent 110%);
 }
 
 .subscribe div {
-    margin: 20px 30px 20px 0px;
+    margin: 20px;
+    text-align: center;
 }
 
 .subscribe div h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
+    font-size: 4vw;
     margin-bottom: 20px;
 }
 
@@ -266,38 +257,45 @@ tbody td {
     font-weight: 500;
 }
 
-/* RESPONSIVE ADJUSTMENTS */
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-    #carouselExampleCaptions {
-        height: 50vh;
-    }
-
-    #carouselExampleCaptions .carousel-item img {
-        height: 50vh;
-    }
-
     .medal {
         flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .medal-one {
-        width: 100%;
-        text-align: center;
-    }
-
-    .about {
-        flex-direction: column;
-        text-align: center;
         padding: 20px;
     }
 
+    .about img {
+        max-width: 100%;
+    }
+
     .quote {
+        text-align: center;
         padding: 20px;
     }
 
     .subscribe {
         flex-direction: column;
+    }
+
+    .subscribe img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption h1 {
+        font-size: 6vw;
+    }
+
+    .carousel-caption p {
+        font-size: 3vw;
+    }
+
+    .about h1 {
+        font-size: 6vw;
+    }
+
+    .subscribe div h2 {
+        font-size: 5vw;
     }
 }
