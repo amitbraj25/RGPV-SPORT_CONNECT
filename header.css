@@ -1,5 +1,17 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.topnav{
+body {
+    line-height: 1.6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* TOP NAVIGATION */
+.topnav {
     display: flex;
     height: 50px;
     align-items: center;
@@ -8,117 +20,130 @@
     padding: 0px 20px;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
     text-shadow: 0px 0px 30px rgb(0, 0, 0);
+}
 
-} .topnav a:hover{
+.topnav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topnav a:hover {
     color: aliceblue;
 }
-.lang{
+
+.lang {
     height: 40px;
-    margin-left: 30px; 
+    margin-left: 10px;
     margin-right: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px; 
-    font-weight: bold; 
-    background-color: rgb(58, 58, 59); 
-    color: rgb(194, 194, 194); 
-    border: none
-}.lang:hover{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(58, 58, 59);
+    color: rgb(194, 194, 194);
+    border: none;
+}
+
+.lang:hover {
     color: aliceblue;
     border: none;
 }
-.topnav a{
-    text-decoration: none;
-    color: inherit;
-}
-.topnav ul{
+
+.topnav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: help;
+    cursor: pointer;
     color: rgb(194, 194, 194);
 }
-.topnav ul a{
+
+.topnav ul a {
     text-decoration: none;
     color: inherit;
-    cursor: help;
+    cursor: pointer;
 }
+
 .topnav ul li {
     list-style: none;
-    margin: 0px 0px 0px 40px;
-    /* border: 1px solid black; */
-   
+    margin-left: 20px;
 }
-.signup{
+
+.signup {
     color: aliceblue;
     background-color: black;
     padding: 10px 30px;
     cursor: pointer;
     border-radius: 5px;
-    
-}.signup:hover{
-    /* text-shadow: 0px 0px 15px aliceblue; */
+    transition: all ease 1s;
+}
+
+.signup:hover {
     color: black;
     background-color: aliceblue;
     text-shadow: 0px 0px 6px black;
     box-shadow: 0px 0px 5px aliceblue;
     font-weight: 900;
-    transition: all ease 1s;
 }
 
-.monoBar{
+/* MONOBAR */
+.monoBar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    height: fit-content;
     padding: 20px 15px;
     color: aliceblue;
-    overflow: hidden;
-    
-}
-.monoBar a{
-    text-decoration: none;
-}
-.Logo{
-    height: 150px;
-}
-.orgLogo{
-    height: 90px;
 }
 
-.navBar{
+.monoBar a {
+    text-decoration: none;
+}
+
+.Logo {
+    height: auto;
+    max-height: 150px;
+    width: auto;
+}
+
+.orgLogo {
+    height: auto;
+    max-height: 90px;
+    width: auto;
+}
+
+/* NAVBAR */
+.navBar {
     margin-top: 1px;
     color: aliceblue;
     background-color: black;
-    height:fit-content;
     padding: 10px 30px 0px 30px;
     border-bottom: white 1px solid;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
 }
-.navBar ul{
+
+.navBar ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
-.navBar ul a{
+
+.navBar ul a {
     text-decoration: none;
     color: inherit;
 }
-.navBar ul a li{
+
+.navBar ul a li {
     list-style: none;
 }
-.navBar ul a :hover{
+
+.navBar ul a:hover {
     text-shadow: 0px 0px 20px aliceblue;
 }
 
-
-
-
-/* Footer */
+/* FOOTER */
 footer {
     background-color: #000;
     padding: 20px;
@@ -129,4 +154,64 @@ footer {
 
 .footer-content p {
     margin: 0;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .topnav {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .topnav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .monoBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup {
+        padding: 8px 20px;
+    }
+
+    .Logo, .orgLogo {
+        max-height: 100px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .topnav {
+        font-size: 14px;
+    }
+
+    .lang {
+        font-size: 14px;
+    }
+
+    .signup {
+        padding: 6px 15px;
+    }
+
+    .monoBar {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navBar {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }
